@@ -2,8 +2,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { render } from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
-import Login from "./routes/login";
-import Registration from './routes/registration';
+import Login from "./Pages/login";
+import Registration from './Pages/registration';
 
 const rootElement = document.getElementById("root");
 render(

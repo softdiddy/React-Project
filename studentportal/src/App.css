@@ -12,13 +12,49 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-.navBac{
+.navBac {
   background-color: #ccc;
-  border-bottom:10px;
+  border-bottom: 10px;
 }
-.navbar_wrapper a{
+.btn{
+  width: 80%;
+  border-radius:1rem;
+}
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.navbar_wrapper a {
   padding-left: 20px;
-  color:#014e07;
+  color: #014e07;
+  font-weight: bolder;
+}
+.registrationForm {
+  background-color: #ccc;
+  padding: 10px;
+  border-radius: 0.5rem;
+}
+.mt-70{
+  margin-top: 70px;
+}
+.npm{
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.imgLogo{
+  width: 20%;
+}
+.imgslider{
+  width: 100%;
+  height: 400px;
+}
+.cardBorder {
+  width: 100%;
+
+  box-shadow: 5px 10px #ccc;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
 }
 .App-header {
   background-color: #282c34;
@@ -29,10 +65,11 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  font-weight: bolder;
 }
 
 .App-link {
-  color:#014e07;
+  color: #014e07;
 }
 
 @keyframes App-logo-spin {
