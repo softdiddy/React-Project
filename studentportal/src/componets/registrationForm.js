@@ -1,6 +1,7 @@
 import { Card, Button, Row, Form, Col,Badge } from "react-bootstrap";
 import React,{useState} from "react";
-import {useHistory} from "react-router-dom";
+import {useNavigate} from 'react-router-dom';
+
 
 export default function RegistrationForm() {
 const [ user, setUser] = useState({
@@ -12,15 +13,27 @@ const [ user, setUser] = useState({
   phonenumber:""
 });
 
+const navigate=useNavigate();
+
 const handleChange = (e) => {
   setUser((prev) => ({
     ...prev,
     ...{[e.target.name]: e.target.value},
   }));
 }
-  const Signup = () => {
+   async function Signup(){
     let item= user;
-   
+    let result=await fetch("http://portal.eduflix.ng/api/createAccount",{
+      method:'POST',
+      body:JSON.stringify(item),
+      headers:{
+        "Content-Type" : 'application/json',
+        "Accept" : 'application/json'
+      }
+    })
+      result=await result.json();
+      localStorage.setItem("userInfo",JSON.stringify(result));
+      navigate("/login");
   }
   return (
     <Card className="cardBorder">
